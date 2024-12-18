@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Student List</h2>
+        <table border="1">
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Actions</th>
+          </tr>
+          <tr *ngFor="let student of students">
+            <td>{{ student.name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.grade }}</td>
+            <td>
+              <button (click)="onDelete(student.id)">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+</body>
+</html>
